@@ -36,7 +36,7 @@ def main():
     coords_longitude = float(fetch_coordinates(apikey, address_user)[0])
     coords_latitude = float(fetch_coordinates(apikey, address_user)[1])
 
-    m = folium.Map([coords_longitude, coords_latitude], zoom_start=12)
+    m = folium.Map([coords_latitude, coords_longitude], zoom_start=12)
 
     folium.Marker(location=[coords_latitude, coords_longitude],
                   tooltip="Click me!",
